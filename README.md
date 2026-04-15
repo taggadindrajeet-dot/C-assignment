@@ -172,3 +172,97 @@ int main() {
 
     return 0;
 }
+
+
+1. Introduction
+
+The Library Management System is a software application designed to manage books efficiently in a library. This project is implemented using Data Structures in C++, specifically Linked List, Stack, and Queue.
+
+The system allows users to:
+
+Add new books
+Issue books
+Return books
+Search for books
+Display available books
+
+Additionally, it uses:
+
+Queue to manage waiting lists
+Stack to track recently returned books
+
+This makes the system more efficient and organized.
+
+2. Objectives of the Project
+
+The main objectives of this project are:
+
+To understand the use of Linked List for dynamic data storage
+To implement Stack and Queue in a real-life application
+To manage library operations like issuing and returning books
+To improve programming and problem-solving skills
+To simulate a real-world library system
+3. Methodology / System Design
+Data Structures Used:
+Linked List
+Used to store book records
+Each node contains:
+Book ID
+Title
+Issued status
+Pointer to next book
+Queue (FIFO - First In First Out)
+Used for waiting list of books
+If a book is already issued, the request is added to queue
+Stack (LIFO - Last In First Out)
+Used to track recently returned books
+Last returned book is shown first
+Working of System:
+Add Book: Inserts a new book at the end of the linked list
+Issue Book:
+If available → issue immediately
+If not → add to waiting queue
+Return Book:
+Marks book as available
+Pushes book ID into stack
+Issues to next waiting user if exists
+Search Book: Finds book using ID
+Display Books: Shows all available (not issued) books
+4. Implementation / Source Code
+
+The project is implemented in C++ using Object-Oriented Programming.
+
+Main Components:
+Class Book
+Stores book details (ID, title, issued status)
+Uses pointer for linked list
+Class Library
+Manages all operations:
+addBook()
+issueBook()
+returnBook()
+searchBook()
+displayBooks()
+showRecentReturns()
+Main Function
+Provides menu-driven interface
+Takes user input and performs operations
+Key Features in Code:
+Dynamic memory allocation using new
+Use of STL:
+queue for waiting list
+stack for recent returns
+Loop-based menu system for user interaction
+5. Conclusion
+
+This project successfully demonstrates the practical use of Data Structures in solving real-world problems.
+
+By using:
+
+Linked List → efficient book storage
+Queue → fair waiting system
+Stack → tracking recent returns
+
+The system becomes efficient and user-friendly.
+
+Overall, this project helps in understanding how different data structures can be combined to build a complete application.
